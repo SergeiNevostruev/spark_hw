@@ -8,7 +8,7 @@ def run():
   spark.conf.set("spark.sql.execution.arrow.pyspark.enabled", "true")
   crime_file = '/content/drive/MyDrive/otus/spark/crime.csv'
   offense_codes_file = '/content/drive/MyDrive/otus/spark/offense_codes.csv'
-  path_to_out_file = "my_data_mart.parquet"
+  path_to_out_file = "/content/my_data_mart.parquet"
 
   df = spark.read.csv(crime_file, header=True, inferSchema=True)
   df_dist = df.dropDuplicates()
